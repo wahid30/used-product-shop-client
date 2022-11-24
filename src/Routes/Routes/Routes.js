@@ -5,6 +5,7 @@ import Iphones from "../../Pages/Home/MobileCategories/ShowMobileCategories/Ipho
 import OnePlus from "../../Pages/Home/MobileCategories/ShowMobileCategories/OnePlus/OnePlus";
 import Samsung from "../../Pages/Home/MobileCategories/ShowMobileCategories/Samsung/Samsung";
 import ShowMobileCategories from "../../Pages/Home/MobileCategories/ShowMobileCategories/ShowMobileCategories";
+import Blogs from "../../Pages/Shared/Blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/onePlus",
         element: <OnePlus></OnePlus>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
     ],
   },
