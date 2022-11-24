@@ -1,0 +1,65 @@
+[
+  {
+    "_id": 1,
+    "name": "iphone 14 pro max",
+    "resale_price": 1099,
+    "location": "Chittagong",
+    "image": "https://m-cdn.phonearena.com/images/article/134410-wide-two_1200/We-just-got-the-biggest-iPhone-14-Pro-Max-periscope-zoom-camera-hint.jpg?1629284901",
+    "original_price": 1299,
+    "yearsOfUse": 0.5
+  },
+  {
+    "_id": 1,
+    "name": "iphone 13 pro max",
+    "resale_price": 999,
+    "location": "Dhaka",
+    "image": "https://th.bing.com/th/id/R.77eba3404e8e70536404531b19d7507a?rik=EpN4Kr67hZlhvQ&pid=ImgRaw&r=0",
+    "original_price": 1199,
+    "yearsOfUse": 1
+  },
+  {
+    "_id": 1,
+    "name": "iphone 12 pro max",
+    "resale_price": 999,
+    "location": "Comilla",
+    "image": "https://th.bing.com/th/id/OIP.R6TySRDJ9n9dsO1wlka0zAHaD4?pid=ImgDet&rs=1",
+    "original_price": 1199,
+    "yearsOfUse": 1.5
+  },
+  {
+    "_id": 1,
+    "name": "iphone 11 pro max",
+    "resale_price": 899,
+    "location": "Barishal",
+    "image": "https://th.bing.com/th/id/R.9274695586d8f5be4042a8098080a2a2?rik=ddVcM4gKkDk%2fPA&pid=ImgRaw&r=0",
+    "original_price": 1099,
+    "yearsOfUse": 2
+  },
+  {
+    "_id": 1,
+    "name": "iphone xs max",
+    "resale_price": 799,
+    "location": "Sylhet",
+    "image": "https://th.bing.com/th/id/R.da3b9828cdf34a54f8ba5c701f8f24eb?rik=IxRgSZqY7YKNLg&pid=ImgRaw&r=0",
+    "original_price": 999,
+    "yearsOfUse": 2.5
+  },
+  {
+    "_id": 1,
+    "name": "iphone 13 mini",
+    "resale_price": 399,
+    "location": "Rajshahi",
+    "image": "https://th.bing.com/th/id/R.eb4de3430eb29bfe3a824d6ecc83d51b?rik=GfrvR3aeEHsUDQ&pid=ImgRaw&r=0",
+    "original_price": 599,
+    "yearsOfUse": 3
+  },
+  {
+    "_id": 1,
+    "name": "iphone 12 mini",
+    "resale_price": 899,
+    "location": "Khulna",
+    "image": "https://th.bing.com/th/id/R.99730cf1442a9c1a4ade194c3fd641c9?rik=z2izGrvQI5gQhQ&pid=ImgRaw&r=0",
+    "original_price": 499,
+    "yearsOfUse": 3.5
+  }
+]
