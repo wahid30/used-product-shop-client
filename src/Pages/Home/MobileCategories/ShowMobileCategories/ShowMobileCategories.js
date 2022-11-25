@@ -1,14 +1,23 @@
 import React from "react";
-import Iphones from "./Iphones/Iphones";
-import OnePlus from "./OnePlus/OnePlus";
-import Samsung from "./Samsung/Samsung";
+import { Link } from "react-router-dom";
 
-const ShowMobileCategories = () => {
+const ShowMobileCategories = ({ mobileCategory }) => {
+  const { name, image } = mobileCategory;
   return (
     <div>
-      <Iphones></Iphones>
-      <Samsung></Samsung>
-      <OnePlus></OnePlus>
+      <div className="card w-full bg-base-100 shadow-xl image-full">
+        <figure>
+          <img src={image} alt="Shoes" />
+        </figure>
+        <div className="card-body text-center">
+          <h2 className="text-4xl">{name}</h2>
+          <div className=" mt-20">
+            <Link to="">
+              <button className="btn btn-primary">Explore</button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
