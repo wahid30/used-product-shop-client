@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const DisplayMobilesCard = ({ mobile }) => {
+const DisplayMobilesCard = ({ mobile, setItem }) => {
   // console.log(mobile);
   const {
     name,
@@ -38,9 +38,13 @@ const DisplayMobilesCard = ({ mobile }) => {
             <div className="badge badge-outline">Rating: {rating.number}</div>
           </div>
           <div>
-            <Link>
-              <button className="btn btn-success">Book Now</button>
-            </Link>
+            <label
+              onClick={() => setItem(mobile)}
+              htmlFor="booking-modal"
+              className="btn btn-primary"
+            >
+              Book Now
+            </label>
           </div>
         </div>
       </div>
