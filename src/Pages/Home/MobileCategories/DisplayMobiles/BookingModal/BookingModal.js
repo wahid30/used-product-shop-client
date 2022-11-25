@@ -1,6 +1,6 @@
 import React from "react";
 
-const BookingModal = ({ item }) => {
+const BookingModal = ({ item, setItem }) => {
   const {
     name,
     category_id,
@@ -18,10 +18,19 @@ const BookingModal = ({ item }) => {
     event.preventDefault();
     const form = event.target;
     const date = form.date.value;
-    const name = form.name.value;
+    const itemName = form.name.value;
     const email = form.email.value;
     const phone = form.phone.value;
-    console.log(date, name, email, phone);
+    // console.log(date, name, email, phone);
+    const booking = {
+      bookingDate: date,
+      item: name,
+      customer: itemName,
+      email,
+      phone,
+    };
+    console.log(booking);
+    setItem(null);
   };
   return (
     <>

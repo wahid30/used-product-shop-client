@@ -21,7 +21,7 @@ const DisplayMobiles = () => {
           ></DisplayMobilesCard>
         ))}
       </div>
-      {item && <BookingModal item={item}></BookingModal>}
+      {item && <BookingModal setItem={setItem} item={item}></BookingModal>}
     </div>
   );
 };
