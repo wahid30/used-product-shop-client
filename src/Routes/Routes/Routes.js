@@ -5,6 +5,7 @@ import DisplayMobiles from "../../Pages/Home/MobileCategories/DisplayMobiles/Dis
 import ShowMobileCategories from "../../Pages/Home/MobileCategories/ShowMobileCategories/ShowMobileCategories";
 import Login from "../../Pages/Login/Login";
 import Blogs from "../../Pages/Shared/Blogs/Blogs";
+import SignUp from "../../Pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
       {
         path: "/blogs",
