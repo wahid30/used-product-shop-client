@@ -3,6 +3,7 @@ import Main from "../../layouts/Main/Main";
 import HomePage from "../../Pages/Home/HomePage/HomePage";
 import DisplayMobiles from "../../Pages/Home/MobileCategories/DisplayMobiles/DisplayMobiles";
 import ShowMobileCategories from "../../Pages/Home/MobileCategories/ShowMobileCategories/ShowMobileCategories";
+import Login from "../../Pages/Login/Login";
 import Blogs from "../../Pages/Shared/Blogs/Blogs";
 
 export const router = createBrowserRouter([
@@ -22,8 +23,8 @@ export const router = createBrowserRouter([
         },
       },
       {
-        path: "/allmobiles",
-        element: <ShowMobileCategories></ShowMobileCategories>,
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "/blogs",
