@@ -21,6 +21,20 @@ const Navbar = () => {
       <li>
         <Link to="/blogs">Blogs</Link>
       </li>
+      {user?.uid ? (
+        <>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+          <li>
+            <button onClick={handleLogOut}>Sign out</button>
+          </li>
+        </>
+      ) : (
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+      )}
     </React.Fragment>
   );
   return (
@@ -57,17 +71,6 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">{menuItems}</ul>
-        </div>
-        <div className="navbar-end">
-          {user?.uid ? (
-            <button onClick={handleLogOut} className="btn btn-sm">
-              Sign Out
-            </button>
-          ) : (
-            <Link to="/login" className="btn btn-sm">
-              Login
-            </Link>
-          )}
         </div>
       </div>
     </div>
