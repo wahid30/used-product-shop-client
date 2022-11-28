@@ -1,14 +1,25 @@
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+// import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ShowMobileCategories from "./ShowMobileCategories/ShowMobileCategories";
 
 const MobileCategories = () => {
-  const [mobileCategories, setMobileCategories] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/mobiles-category")
-      .then((res) => res.json())
-      .then((data) => setMobileCategories(data));
-  }, []);
+  // const [mobileCategories, setMobileCategories] = useState([]);
+
+  const { data: mobileCategories = [] } = useQuery({
+    queryKey: ["mobiles-category"],
+    queryFn: async () => {
+      const res = await fetch("http://localhost:5000/mobiles-category");
+      const data = await res.json();
+      return data;
+    },
+  });
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/mobiles-category")
+  //     .then((res) => res.json())
+  //     .then((data) => setMobileCategories(data));
+  // }, []);
   return (
     <div>
       <div className="my-3 grid md:grid-cols-2 lg:grid-cols-3 gap-5 ">
