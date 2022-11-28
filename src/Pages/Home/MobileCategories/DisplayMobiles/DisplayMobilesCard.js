@@ -11,6 +11,7 @@ const DisplayMobilesCard = ({ mobile, setItem }) => {
     original_price,
     yearsOfUse,
     rating,
+    posted,
   } = mobile;
   return (
     <div>
@@ -33,10 +34,12 @@ const DisplayMobilesCard = ({ mobile, setItem }) => {
           </div>
           <div className="card-actions">
             <div className="badge badge-outline">
-              Years of Use: {yearsOfUse}
+              Years of Use: {yearsOfUse}y
             </div>
             <div className="badge badge-outline">Rating: {rating.number}</div>
           </div>
+          <div className="badge badge-outline">Posted on: {posted}</div>
+          <div className="badge badge-outline">Seller's name: {}</div>
           <div>
             <label
               onClick={() => setItem(mobile)}

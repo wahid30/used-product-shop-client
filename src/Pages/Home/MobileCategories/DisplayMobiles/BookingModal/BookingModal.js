@@ -21,6 +21,7 @@ const BookingModal = ({ item, setItem }) => {
     const itemName = form.name.value;
     const email = form.email.value;
     const phone = form.phone.value;
+    const meetingLocation = form.location.value;
     // console.log(date, name, email, phone);
     const booking = {
       bookingDate: date,
@@ -28,6 +29,7 @@ const BookingModal = ({ item, setItem }) => {
       customer: itemName,
       email,
       phone,
+      meetingLocation,
     };
     console.log(booking);
     setItem(null);
@@ -76,6 +78,12 @@ const BookingModal = ({ item, setItem }) => {
               name="phone"
               type="text"
               placeholder="Phone Number"
+              className="input w-full input-bordered"
+            />
+            <input
+              name="location"
+              type="text"
+              placeholder="Meeting Location"
               className="input w-full input-bordered"
             />
             <br />

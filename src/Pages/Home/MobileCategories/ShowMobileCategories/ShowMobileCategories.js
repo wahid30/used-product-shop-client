@@ -12,7 +12,7 @@ const ShowMobileCategories = ({ mobileCategory }) => {
         <div className="card-body text-center">
           <h2 className="text-4xl">{name}</h2>
           <div className=" mt-20">
-            <Link to={`/category/${mobileCategory._id}`}>
+            <Link to={`/category/${mobileCategory.category_id}`}>
               <button className="btn btn-primary">Explore</button>
             </Link>
           </div>

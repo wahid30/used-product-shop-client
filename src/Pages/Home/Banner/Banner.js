@@ -6,7 +6,7 @@ const Banner = () => {
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img
-            src="https://m-cdn.phonearena.com/images/article/134410-wide-two_1200/We-just-got-the-biggest-iPhone-14-Pro-Max-periscope-zoom-camera-hint.jpg?1629284901"
+            src="https://th.bing.com/th/id/R.9ade469f2a6aa4ca5a3d0d6587935644?rik=gzZB6bgM6g6Cqw&pid=ImgRaw&r=0"
             alt=""
             className="w-full"
           />
@@ -51,7 +51,7 @@ const Banner = () => {
         </div>
         <div id="slide4" className="carousel-item relative w-full">
           <img
-            src="https://th.bing.com/th/id/R.9ade469f2a6aa4ca5a3d0d6587935644?rik=gzZB6bgM6g6Cqw&pid=ImgRaw&r=0"
+            src="https://m-cdn.phonearena.com/images/article/134410-wide-two_1200/We-just-got-the-biggest-iPhone-14-Pro-Max-periscope-zoom-camera-hint.jpg?1629284901"
             className="w-full"
             alt=""
           />
