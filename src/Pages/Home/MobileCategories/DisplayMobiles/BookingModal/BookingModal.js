@@ -46,7 +46,7 @@ const BookingModal = ({ item, setItem }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.acknowledged) {
           setItem(null);
           toast.success("Booking confirmed");

@@ -5,7 +5,7 @@ import DisplayMobilesCard from "./DisplayMobilesCard";
 
 const DisplayMobiles = () => {
   const mobiles = useLoaderData();
-  console.log(mobiles);
+  // console.log(mobiles);
   const [item, setItem] = useState(null);
   return (
     <div>
