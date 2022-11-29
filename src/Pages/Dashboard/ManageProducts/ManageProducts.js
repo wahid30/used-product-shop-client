@@ -61,7 +61,14 @@ const ManageProducts = () => {
               <th>Avatar</th>
               <th>Name</th>
               <th>Email</th>
-              <th>selection</th>
+              <th>Device</th>
+              <th>Price</th>
+              <th>Condition</th>
+              <th>Number</th>
+              <th>Location</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Years of Purchase</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -79,6 +86,13 @@ const ManageProducts = () => {
                 <td>{product.name}</td>
                 <td>{product.email}</td>
                 <td>{product.selection}</td>
+                <td>${product.price}</td>
+                <td>{product.condition}</td>
+                <td>{product.number}</td>
+                <td>{product.location}</td>
+                <td>{product.productCategory}</td>
+                <td>{product.description}</td>
+                <td>{product.yearsOfPurChase}y</td>
                 <td>
                   <label
                     onClick={() => setDeletingproduct(product)}

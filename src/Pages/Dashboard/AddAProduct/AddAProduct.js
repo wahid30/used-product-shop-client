@@ -194,7 +194,9 @@ const AddAProduct = () => {
             <span className="label-text">Select Mobile Category</span>
           </label>
           <select
-            {...register("productCategory")}
+            {...register("productCategory", {
+              required: true,
+            })}
             className="select input-bordered w-full max-w-xs"
           >
             <option>iphone</option>
@@ -209,7 +211,9 @@ const AddAProduct = () => {
             <span className="label-text">Description</span>
           </label>
           <textarea
-            {...register("description")}
+            {...register("description", {
+              required: true,
+            })}
             className="textarea input-bordered"
             placeholder="Description"
           ></textarea>
