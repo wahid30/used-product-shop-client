@@ -13,6 +13,7 @@ const AddAProduct = () => {
   } = useForm();
 
   const imageHostKey = process.env.REACT_APP_imgbb_key;
+  // console.log(imageHostKey);
 
   const navigate = useNavigate();
 
@@ -51,7 +52,7 @@ const AddAProduct = () => {
             yearsOfPurChase: data.yearsOfPurChase,
             image: imgData.data.url,
           };
-          console.log(product);
+          // console.log(product);
 
           // save product information to the database
           fetch("http://localhost:5000/products", {

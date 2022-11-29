@@ -4,6 +4,7 @@ import Main from "../../layouts/Main/Main";
 import AddAProduct from "../../Pages/Dashboard/AddAProduct/AddAProduct";
 import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
+import ManageProducts from "../../Pages/Dashboard/ManageProducts/ManageProducts";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
 import HomePage from "../../Pages/Home/HomePage/HomePage";
 import DisplayMobiles from "../../Pages/Home/MobileCategories/DisplayMobiles/DisplayMobiles";
@@ -69,6 +70,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AddAProduct></AddAProduct>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/manageproducts",
+        element: (
+          <AdminRoute>
+            <ManageProducts></ManageProducts>
           </AdminRoute>
         ),
       },
