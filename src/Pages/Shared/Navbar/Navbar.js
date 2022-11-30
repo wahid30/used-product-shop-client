@@ -12,12 +12,12 @@ const Navbar = () => {
   };
   const menuItems = (
     <React.Fragment>
-      <li>
+      {/* <li>
         <Link>Item 1</Link>
       </li>
       <li>
         <Link>Item 3</Link>
-      </li>
+      </li> */}
       <li>
         <Link to="/blogs">Blogs</Link>
       </li>

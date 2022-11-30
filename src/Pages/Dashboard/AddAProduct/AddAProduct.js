@@ -78,7 +78,7 @@ const AddAProduct = () => {
   }
 
   return (
-    <div className="w-96 p-7 border-4 rounded my-10">
+    <div className="w-96 p-7 border-4 rounded my-10 ml-5">
       <h2 className="text-4xl">Add A Product</h2>
       <form onSubmit={handleSubmit(handleAddAProduct)}>
         {/* for name  */}

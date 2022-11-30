@@ -6,11 +6,13 @@ import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import ManageProducts from "../../Pages/Dashboard/ManageProducts/ManageProducts";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
+import AllMobiles from "../../Pages/Home/AllMobiles/AllMobiles";
 import HomePage from "../../Pages/Home/HomePage/HomePage";
 import DisplayMobiles from "../../Pages/Home/MobileCategories/DisplayMobiles/DisplayMobiles";
 import ShowMobileCategories from "../../Pages/Home/MobileCategories/ShowMobileCategories/ShowMobileCategories";
 import Login from "../../Pages/Login/Login";
 import Blogs from "../../Pages/Shared/Blogs/Blogs";
+import ErrorPage from "../../Pages/Shared/ErrorPage/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -43,7 +45,15 @@ export const router = createBrowserRouter([
         path: "/blogs",
         element: <Blogs></Blogs>,
       },
+      {
+        path: "/allmobiles",
+        element: <AllMobiles></AllMobiles>,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
   },
   {
     path: "/dashboard",

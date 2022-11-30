@@ -1,4 +1,4 @@
-# Live site link: https://rent-services-2245c.web.app/
+# Live site link:
 
 # Library:
 
@@ -20,8 +20,12 @@
 4.  Use authentication system
 5.  Use social login form of google
 6.  Use private route
-7.  Create a footer
+7.  if a user is logged in , and if this is user is admin then he/she can see the all users , add a products and my products routes
+8.  if normally a user is logged in, he/she can see only the my orders routes
+9.  for admin, i used admin middleware from the server
+10. i used jwt token
+11. i react-query
 
 # Description:
 
-In this site, a user can easily buy and sell their used product.
+In this site, a user can easily buy and sell their used products.
