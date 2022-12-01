@@ -20,7 +20,9 @@ const AddAProduct = () => {
   const { data: selections, isLoading } = useQuery({
     queryKey: ["mobileSelection"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/mobileSelection");
+      const res = await fetch(
+        "https://used-mobile-shop-server.vercel.app/mobileSelection"
+      );
       const data = await res.json();
       return data;
     },
@@ -55,7 +57,7 @@ const AddAProduct = () => {
           // console.log(product);
 
           // save product information to the database
-          fetch("http://localhost:5000/products", {
+          fetch("https://used-mobile-shop-server.vercel.app/products", {
             method: "POST",
             headers: {
               "content-type": "application/json",

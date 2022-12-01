@@ -36,7 +36,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/category/${params.id}`);
+          return fetch(
+            `https://used-mobile-shop-server.vercel.app/category/${params.id}`
+          );
         },
       },
       {
@@ -105,7 +107,9 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/bookings/${params.id}`),
+          fetch(
+            `https://used-mobile-shop-server.vercel.app/bookings/${params.id}`
+          ),
       },
     ],
   },

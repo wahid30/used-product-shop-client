@@ -10,14 +10,16 @@ const MobileCategories = () => {
   const { data: mobileCategories = [], isLoading } = useQuery({
     queryKey: ["mobiles-category"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/mobiles-category");
+      const res = await fetch(
+        "https://used-mobile-shop-server.vercel.app/mobiles-category"
+      );
       const data = await res.json();
       return data;
     },
   });
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/mobiles-category")
+  //   fetch("https://used-mobile-shop-server.vercel.app/mobiles-category")
   //     .then((res) => res.json())
   //     .then((data) => setMobileCategories(data));
   // }, []);

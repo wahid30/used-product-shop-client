@@ -4,7 +4,7 @@ import ShowAllMobiles from "./ShowAllMobiles";
 const AllMobiles = () => {
   // const [allMobiles, setAllMobiles] = useState();
   // useEffect(() => {
-  //   fetch("http://localhost:5000/mobiles")
+  //   fetch("https://used-mobile-shop-server.vercel.app/mobiles")
   //     .then((res) => res.json())
   //     // .then((data) => setAllMobiles(data));
   //     .then((data) => console.log(data));
