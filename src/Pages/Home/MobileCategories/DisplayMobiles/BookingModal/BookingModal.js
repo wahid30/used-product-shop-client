@@ -33,6 +33,7 @@ const BookingModal = ({ item, setItem }) => {
       email,
       phone,
       meetingLocation,
+      resale_price,
     };
 
     // console.log(booking);

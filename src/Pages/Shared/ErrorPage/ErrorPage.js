@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
+  const error = useRouteError();
   return (
     <div className="card w-96 shadow-xl mx-auto mt-32">
       <figure className="px-10 pt-10">
@@ -13,7 +14,7 @@ const ErrorPage = () => {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">Opps!!!</h2>
-        <p>404! Page Not Found</p>
+        <p className="text-red-400">{error.statusText || error.message}</p>
         <div className="card-actions">
           <Link to="/">
             <button className="btn btn-primary">Go back to Home</button>

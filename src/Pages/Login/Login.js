@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
@@ -19,9 +19,11 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  if (token) {
-    navigate(from, { replace: true });
-  }
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [from, navigate, token]);
 
   const handleLogin = (data) => {
     console.log(data);
@@ -44,6 +46,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setLoginUserEmail(user.email);
       })
       .catch((error) => {
         console.log(error);
@@ -95,6 +98,32 @@ const Login = () => {
               <p className="text-red-600">{errors.password?.message}</p>
             )}
           </div>
+          {/* for option  */}
+          <div className="form-control w-full max-w-xs border p-5 my-3 rounded-3xl bg-slate-300">
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">Seller</span>
+                <input
+                  type="radio"
+                  name="radio-10"
+                  className="radio checked:bg-blue-500"
+                  checked
+                />
+              </label>
+            </div>
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <span className="label-text">Buyer</span>
+                <input
+                  type="radio"
+                  name="radio-10"
+                  className="radio checked:bg-blue-500"
+                  checked
+                />
+              </label>
+            </div>
+          </div>
+          {/* for login  */}
           <input
             className="bg-teal-700 text-white btn glass w-full"
             value="Login"

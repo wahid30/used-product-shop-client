@@ -28,9 +28,25 @@ const AllUsers = () => {
       });
   };
 
+  const handleDeleteUser = (id) => {
+    fetch(`http://localhost:5000/users/admin/${id}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          refetch();
+          toast.success(`Deleted successfully`);
+        }
+      });
+  };
+
   return (
     <div className="my-5">
-      <h2 className="text-3xl">All Users</h2>
+      <h2 className="text-3xl">All Seller</h2>
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -59,7 +75,12 @@ const AllUsers = () => {
                   )}
                 </td>
                 <td>
-                  <button className="btn btn-xs btn-danger">Delete</button>
+                  <button
+                    onClick={() => handleDeleteUser(user._id)}
+                    className="btn btn-xs btn-danger"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}

@@ -6,6 +6,7 @@ import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import ManageProducts from "../../Pages/Dashboard/ManageProducts/ManageProducts";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
+import Payment from "../../Pages/Dashboard/Payment/Payment";
 import AllMobiles from "../../Pages/Home/AllMobiles/AllMobiles";
 import HomePage from "../../Pages/Home/HomePage/HomePage";
 import DisplayMobiles from "../../Pages/Home/MobileCategories/DisplayMobiles/DisplayMobiles";
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -28,7 +30,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/category/:id",
-        element: <DisplayMobiles></DisplayMobiles>,
+        element: (
+          <PrivateRoute>
+            <DisplayMobiles></DisplayMobiles>
+          </PrivateRoute>
+        ),
         loader: async ({ params }) => {
           return fetch(`http://localhost:5000/category/${params.id}`);
         },
@@ -51,10 +57,10 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "*",
-    element: <ErrorPage></ErrorPage>,
-  },
+  // {
+  //   path: "*",
+  //   element: <ErrorPage></ErrorPage>,
+  // },
   {
     path: "/dashboard",
     element: (
@@ -90,6 +96,16 @@ export const router = createBrowserRouter([
             <ManageProducts></ManageProducts>
           </AdminRoute>
         ),
+      },
+      {
+        path: "/dashboard/payment/:id",
+        element: (
+          <AdminRoute>
+            <Payment></Payment>
+          </AdminRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/bookings/${params.id}`),
       },
     ],
   },
